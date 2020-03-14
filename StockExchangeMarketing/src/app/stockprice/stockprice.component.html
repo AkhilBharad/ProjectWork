@@ -1,0 +1,53 @@
+<p class="h4 text-center">StockPrice</p>
+<div class="container-fluid responsive">
+      <div class="row">
+      <div class="col-md-3 mt-5">
+        <ul class="list-group text-center w-100 list-responsive">
+              <li class="list-group-item">
+                <a  routerLink="/import"><b>ImportData</b></a>
+              </li>
+              <li class="list-group-item">
+                <a  routerLink="/users"><b>ManageUsers</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/addnewcompany"><b>AddNewCompany</b></a>
+              </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/companies"><b>ManageCompany</b></a>
+              </li>
+                <!-- <li class="list-group-item">
+                  <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+                </li> -->
+                <li class="list-group-item">
+                  <a  routerLink="/stockprices"><b>ManageStockPrice</b></a>
+                </li>
+                
+                <li class="list-group-item">
+                  <a  routerLink="/stockexchanges"><b>ManageExchange</b></a>
+                </li>
+                <li class="list-group-item">
+                  <a  routerLink="/ipos"><b>ManageIpos</b></a>
+                </li>
+                <li class="list-group-item">
+                  <a  routerLink="/login"><b>Logout</b></a>
+                </li>
+              </ul>
+      </div>
+      <div class="col-9 mt-5">
+            
+<form [formGroup]="registerStockPrice" (ngSubmit)="onSubmit()">
+<label for="username">Id</label>
+          <input type="number" class="form-control" placeholder="enter id" name="id" id="id" formControlName="id" >
+                <label for="username">Company Id </label>
+          <input type="text" class="form-control" placeholder="Company id" name="companyid" formControlName="companyid" id="companyid">
+          <label for="username">Current Price</label>
+          <input type="text" class="form-control" placeholder="Current Price " name="currentprice" formControlName="currentprice" id="currentprice">
+          <label for="username">OpenDateTime</label>
+          <input type="datetime-local" class="form-control mb-4" placeholder="OpenDateTime " name="opendatetime" formControlName="opendatetime" id="opendatetime">
+        
+            <br><br>
+          
+         <a onclick="location.href='stockprices'"><button class="btn btn-outline-primary" (click)="addStockPrice()"> Add StockPrice</button></a>
+          </form>
+          
+          </div>

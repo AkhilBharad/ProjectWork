@@ -1,0 +1,21 @@
+<table class="table table-dark">
+    <tr>
+        <td>ID</td>
+        <td>COMPANY ID</td>
+        <td> CURRENT PRICE</td>
+        <td>OPEN DATE TIME</td>
+        <td>Deletion</td>
+        <td>Updation</td>
+        
+    </tr>
+    <tr *ngFor="let stockprice of stockprices">
+        <td>{{stockprice.id}}</td>
+        <td>{{stockprice.companyid}}</td>
+        <td>{{stockprice.currentprice}}</td>
+        <td>{{stockprice.opendatetime}}</td>   
+       
+       
+        <td><button class="btn btn-danger" (click)="deleteStockPrice(stockprice)">Delete</button></td>
+        <td><button class="btn btn-primary" (click)="updateStockPrice(stockprice)">Update</button></td>
+    </tr>
+</table>

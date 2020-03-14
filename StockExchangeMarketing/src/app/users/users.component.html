@@ -1,0 +1,23 @@
+<table class="table table-dark" >
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>EMAIL</td>
+        <td>PHONE</td>
+        <!-- <td>PASSWORD</td>
+        <td>RE-ENTER PASSWORD</td> -->
+        <td>Deletion</td>
+        <td>Updation</td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+        <!-- <td>{{user.password}}</td>
+        <td>{{user.repassword}}</td> -->
+        <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button></td>
+        <td><button class="btn btn-primary" (click)="updateUser(user)">Update</button></td>
+    </tr>
+</table>
+

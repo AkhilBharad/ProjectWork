@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 104,
+      "name": "Akhil Bharadwaj",
+      "email": "akhil@gmail.com",
+      "phone": 439753
+    },
+    {
+      "id": 89,
+      "name": "yasmin Mohammed",
+      "email": "yasmin@gmail.com",
+      "phone": "774898"
+    },
+    {
+      "id": 45,
+      "name": "Harshitha",
+      "email": "harshitha@gmail.com",
+      "phone": 474754676
+    },
+    {
+      "id": 105,
+      "name": "Divya",
+      "email": "divya@gmail.com",
+      "phone": 769867
+    },
+    {
+      "id": 567,
+      "name": "tanu",
+      "email": "tanu@gmail.com",
+      "phone": 65788732
+    },
+    {
+      "id": 67,
+      "name": "Syed",
+      "email": "syed@gmail.com",
+      "phone": 54647487
+    }
+  ]
+}

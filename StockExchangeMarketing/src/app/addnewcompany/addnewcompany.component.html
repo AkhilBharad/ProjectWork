@@ -1,0 +1,69 @@
+<p class="h4 text-center">Cognizant Company Details</p>
+<div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100 list-responsive">
+            <li class="list-group-item">
+              <a  routerLink="/import"><b>ImportData</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/users"><b>ManageUsers</b></a>
+            </li>
+            <!-- <li class="list-group-item">
+              <a  routerLink="/addnewcompany"><b>AddNewCompany</b></a>
+            </li> -->
+            <li class="list-group-item">
+              <a  routerLink="/companies"><b>ManageCompany</b></a>
+            </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+              </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/stockexchanges"><b>ManageStockExchange</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                  <a  routerLink="/stockprices"><b>ManageStockPrice</b></a>
+                </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/ipos"><b>ManageIpos</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/login"><b>Logout</b></a>
+              </li> -->
+            </ul>
+    </div>
+    <div class="col-9 mt-5">
+            
+<form [formGroup]="registerCompany" (ngSubmit)="onSubmit()">
+<label for="username">Id</label>
+          <input type="number" class="form-control" placeholder="enter id" name="id" id="id" formControlName="id" >
+                <label for="username">Company Name</label>
+          <input type="text" class="form-control" placeholder="Name of Company" name="companyname" formControlName="companyname" id="companyname">
+          <label for="username">CEO</label>
+          <input type="text" class="form-control" placeholder="CEO of Company" name="ceo" formControlName="ceo" id="ceo">
+          <label for="username">Board of Director</label>
+          <input type="text" class="form-control mb-4" placeholder="Board of Director of Company" name="boardOfDirector" formControlName="boardOfDirector" id="boardOfDirector">
+          <label for="username">No of Employees</label>
+                <input type="text" class="form-control mb-4" placeholder="No of Employees" name="noe" formControlName="noe" id="noe">
+                
+                <label for="username">Turnover</label>
+                <input type="text" class="form-control" placeholder="Turn Over"formControlName="turnover" name="turnover" id="turnover" >
+           
+          <label for="username">Sector</label>
+          <input type="text" class="form-control" placeholder="Name of Sector"formControlName="sector" name="sector" id="sector" >
+          <label for="username">Company Code</label>
+          
+      <input type="text" class="form-control" placeholder="Company Code"formControlName="companyCode" name="companyCode" id="companyCode" >
+
+      <div class="form-group">
+        <label for="Select stock exchange">Select Stock Exchange</label>
+        <select class="form-control" id="selectstockexchange" formControlName="selectstockexchange" name="selectstockexchange">
+          <option>NSE</option>
+          <option>BSE</option>
+        </select>
+    </div>
+         
+            <br><br>
+          
+         <button class="btn btn-outline-primary" (click)="addCompany()" routerLink="/companies" [disabled]="!registerCompany.valid"> Add Company</button>
+          </form>
+
+          </div>

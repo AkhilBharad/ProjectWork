@@ -1,0 +1,70 @@
+<div class="container-fluid responsive">
+  <div class="row">
+    <div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100 list-responsive">
+        <li class="list-group-item">
+          <a routerLink="/import"><b>ImportData</b></a>
+        </li>
+        <li class="list-group-item">
+          <a routerLink="/users"><b>ManageUsers</b></a>
+        </li>
+        <!-- <li class="list-group-item">
+              <a  routerLink="/addnewcompany"><b>AddNewCompany</b></a>
+            </li> -->
+        <li class="list-group-item">
+          <a routerLink="/companies"><b>ManageCompany</b></a>
+        </li>
+        <!-- <li class="list-group-item">
+                <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+              </li> -->
+        <!-- <li class="list-group-item">
+          <a routerLink="/stockprices"><b>ManageStockPrice</b></a>
+        </li> -->
+
+        <li class="list-group-item">
+          <a routerLink="/stockexchanges"><b>ManageExchange</b></a>
+        </li>
+        <li class="list-group-item">
+          <a routerLink="/ipos"><b>ManageIpos</b></a>
+        </li>
+        <!-- <li class="list-group-item">
+          <a routerLink="/login"><b>Logout</b></a>
+        </li> -->
+      </ul>
+    </div>
+    <div class="col-9 mt-5">
+      <!-- <h3 class="text-center">ImportData</h3>
+      <div class="card card-responsive mt-5 p-5 bg-light w-75 h-100">
+        <div class="card-body">
+          <form (ngSubmit)="ImportData()" [formGroup]='importDataForm'>
+            <div class="form-group">
+              <label for="upload excel file">
+                <h4 class="text-danger">Upload Excel File</h4>
+              </label>
+              <input type="file" class="form-control mt-5" id="excel" formControlName="excel"
+                placeholder="Enter Excel File" name="excel" (change)="onFileChange($event)">
+            </div>
+            <button type="submit" class="btn btn-success">Upload</button>&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-danger">Cancel</button>
+          </form>
+        </div>
+      </div> -->
+      <div class="container mt-5 w-50 card card-shadow shadow p-5 lg-5 bg-white rounded form-back">
+        <p class="h4 text-center">Import Excel File</p>
+        <div class="custom-file my-3">
+            <input type="file" name="excelFileUpload" id="inputGroupFile" class="custom-file-input"
+                (change)="onFileChange($event)">
+            <br><br><br><br>
+            <label class="custom-file-label" for="inputGroupFile">Choose File</label>
+        </div>
+        <div class="input-group-append">
+            <span class="input-group-text btn-success" (click)="uploadData()" id="inputGroupFileAddon"
+                type="button">Upload</span>
+        </div>
+
+
+        
+    </div>
+    </div>
+  </div>
+</div>

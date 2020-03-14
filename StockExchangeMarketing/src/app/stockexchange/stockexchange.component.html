@@ -1,0 +1,55 @@
+<p class="h4 text-center">StockExchange Details</p>
+<div class="container-fluid responsive">
+      <div class="row">
+      <div class="col-md-3 mt-5">
+        <ul class="list-group text-center w-100 list-responsive">
+              <li class="list-group-item">
+                <a  routerLink="/import"><b>ImportData</b></a>
+              </li>
+              <li class="list-group-item">
+                <a  routerLink="/users"><b>ManageUsers</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/addnewcompany"><b>AddNewCompany</b></a>
+              </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/companies"><b>ManageCompany</b></a>
+              </li>
+                <!-- <li class="list-group-item">
+                  <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+                </li> -->
+                <!-- <li class="list-group-item">
+                  <a  routerLink="/stockprices"><b>ManageStockPrice</b></a>
+                </li> -->
+                
+                <li class="list-group-item">
+                  <a  routerLink="/stockexchanges"><b>ManageExchange</b></a>
+                </li>
+                <li class="list-group-item">
+                  <a  routerLink="/ipos"><b>ManageIpos</b></a>
+                </li>
+                <!-- <li class="list-group-item">
+                  <a  routerLink="/login"><b>Logout</b></a>
+                </li> -->
+              </ul>
+      </div>
+      <div class="col-9 mt-5">
+            
+<form [formGroup]="registerStockExchange" (ngSubmit)="onSubmit()">
+<label for="username">Id</label>
+          <input type="number" class="form-control" placeholder="enter id" name="id" id="id" formControlName="id" >
+                <label for="username">StockExchange </label>
+          <input type="text" class="form-control" placeholder="Stock Exchange" name="stockexchangename" formControlName="stockexchangename" id="stockexchangename">
+          <label for="username">Brief</label>
+          <input type="text" class="form-control" placeholder="Brief " name="brief" formControlName="brief" id="brief">
+          <label for="username">Address</label>
+          <input type="text" class="form-control mb-4" placeholder="Address " name="address" formControlName="address" id="address">
+          <label for="username">Remarks</label>
+                <input type="text" class="form-control mb-4" placeholder="Remarks" name="remarks" formControlName="remarks" id="remarks">
+        
+            <br><br>
+          
+         <button class="btn btn-outline-primary" (click)="addStockExchange()" [disabled]="!registerStockExchange.valid" routerLink="/stockexchanges"> Add StockExchange</button>
+          </form>
+
+          </div>
